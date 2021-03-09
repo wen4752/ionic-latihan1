@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>halaman2</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-button routerLink="/page-favorite"  mode="ios" expand="block" >Favorite Page</ion-button>  
+  <h4>Judul: {{data.judul}}</h4>
+  Isi: <br>
+  <p>{{data.isi}}</p>
+  Tanggal:
+  <p>{{data.tanggal}}</p>
+  <ion-button (click)="status()"><ion-icon name="{{icon}}"></ion-icon></ion-button>
+  
+  
+</ion-content>

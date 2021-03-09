@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    
+    <ion-title>page-favorite</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let a of data; let i = index">
+      <ion-card>
+        <ion-card-header>
+          <ion-card-subtitle>{{a.tanggal}}</ion-card-subtitle>
+          <ion-card-title>{{a.judul}}</ion-card-title>
+        </ion-card-header>
+      
+        <ion-card-content>
+          {{a.isi}}
+        </ion-card-content>
+      </ion-card>
+    </ion-item>
+  </ion-list>
+  
+</ion-content>

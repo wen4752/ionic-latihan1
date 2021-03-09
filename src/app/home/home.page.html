@@ -1,0 +1,35 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Halaman 1
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<br><br>
+<ion-content>
+  <ion-button routerLink="/page-favorite"  mode="ios" expand="block" >Favorite Page</ion-button>  
+<br><br>
+
+  <ion-item>
+    <ion-label>Judul</ion-label>
+    <ion-input type="text" [(ngModel)]="judul" placeholder="isi judul"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Isi</ion-label>
+    <ion-input type="text" [(ngModel)]="isi" placeholder="isi"></ion-input>
+  </ion-item>
+
+
+
+  <ion-button fill="outline" mode="ios" expand="block" (click)="tambah()">tambah</ion-button>
+  <br><br>
+<ion-list>
+  <ion-item *ngFor="let a of data; let i = index">
+  <h3>Judul:  {{a.judul}}</h3>
+  <ion-button fill="outline" mode="ios" expand="block" (click)="detail(i)">Detail</ion-button>
+  <br><br>
+  </ion-item>
+</ion-list>
+</ion-content>
+
+
